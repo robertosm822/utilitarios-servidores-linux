@@ -6,6 +6,7 @@ Utilitários para servidores.
 
 ## Conectar ao banco no Shell:
  - sudo /usr/bin/mysql -u root -p
+ 
  Primeira senha do Sistema, depois a senha root Mysql.
 
 ## Instalar Phpmyadmin no Ubuntu 19:
