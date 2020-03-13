@@ -16,7 +16,7 @@ Utilitários para servidores.
  - https://help.cloud66.com/maestro/how-to-guides/databases/shells/uninstall-mysql.html
 
 ## Anotações rápidas sobre dúvidas na API MOIP:
-`
+``
 function createCustomerOne($moip, $data)
 {
     // Criando o primeiro cliente, com email unico
@@ -32,4 +32,4 @@ function createCustomerOne($moip, $data)
     gravarLog($customer->getId());
     
     return $customer->getId();
-}`
+}``
