@@ -15,3 +15,21 @@ Utilitários para servidores.
 ## Deinstalar Mysql no Ubuntu 19:
  - https://help.cloud66.com/maestro/how-to-guides/databases/shells/uninstall-mysql.html
 
+## Anotações rápidas sobre dúvidas na API MOIP:
+`
+function createCustomerOne($moip, $data)
+{
+    // Criando o primeiro cliente, com email unico
+    $customer = $moip->customers()->setOwnId(uniqid())
+        ->setFullname($data['fullname'])
+        ->setEmail($data['email'])
+        ->setBirthDate($data['data_nascimento'])
+        ->setTaxDocument($data['cpf'])
+        ->setPhone(12,$data['telefone'])
+        ->addAddress('BILLING', $data['logradouro'], $data['numero'], $data['bairro'], $data['cidade'], $data['uf'], $data['cep'])
+        ->create();
+    // GRAVAR LOG DE ID DE CUSTOMERS
+    gravarLog($customer->getId());
+    
+    return $customer->getId();
+}`
